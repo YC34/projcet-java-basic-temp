@@ -12,7 +12,10 @@ out/
 .settings
 .springBeans
 .sts4-cache
+.iml
+src/application/program/kiosk
 bin/
+
 !**/src/main/**/bin/
 !**/src/test/**/bin/
 
