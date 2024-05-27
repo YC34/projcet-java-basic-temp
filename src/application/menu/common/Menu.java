@@ -1,4 +1,4 @@
-package application.menu;
+package application.menu.common;
 
 
 import application.exception.InvalidChoiceException;

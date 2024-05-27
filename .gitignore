@@ -3,7 +3,9 @@ out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 .idea
+
 first.iml
+
 src/application/program/kiosk
 bin/
 

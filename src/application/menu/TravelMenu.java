@@ -2,44 +2,39 @@ package application.menu;
 
 import application.exception.InvalidChoiceException;
 import application.menu.common.Menu;
-import application.program.school.data.MakeData;
-import application.program.school.report.GenerateGradeReport;
+import application.program.travelagency.TravelAgency;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
-public class SchoolMenu implements Menu {
+public class TravelMenu implements Menu {
+
     private Scanner scanner;
     private List<String> options;
-    private MakeData data;
-    private GenerateGradeReport generateGradeReport;
+    private TravelAgency travelAgency ;
 
-
-    public SchoolMenu(Scanner scanner) {
+    public TravelMenu(Scanner scanner) {
         this.scanner = scanner;
-        this.options = Arrays.asList("(I)nfo 학생들의 인적사항","(B)ack 메인 메뉴로","(E)xit 종료");
-        this.data = new MakeData();
-        this.generateGradeReport = new GenerateGradeReport();
+        this.options = Arrays.asList("(I)nfo 여행정보" ,"(B)ack 메인 메뉴로","(E)xit 종료");
+        this.travelAgency =TravelAgency.getInstance();
     }
 
     @Override
     public void display() {
-        System.out.println("학생정보 시스템을 선택하셨습니다.");
-        for(String option: options){
+        System.out.println("여행정보 메뉴를 선택하셨습니다.");
+        for (String option : options) {
             System.out.println(option);
         }
-
     }
 
     @Override
     public Menu execute(String choice) throws InvalidChoiceException {
         switch (choice.toUpperCase()) {
             case "I":
-                data.createSubject();
-                data.createStudent();
-                String report = generateGradeReport.getReport();
-                System.out.println(report);
+                travelAgency.createTravelPackages();
+                travelAgency.createTravelers();
+                travelAgency.printTravelReports();
                 break;
             case "B":
                 System.out.println("메인 메뉴로 돌아갑니다.");

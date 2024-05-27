@@ -1,4 +1,4 @@
-package application.menu;
+package application.menu.common;
 
 
 /**
@@ -8,6 +8,7 @@ package application.menu;
 public enum MenuType {
         MAIN
     ,   SCHOOL
+    ,   TRAVEL
     ,   EXIT
 
 }

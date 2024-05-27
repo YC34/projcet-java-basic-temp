@@ -1,6 +1,8 @@
 package application.menu;
 
 import application.exception.InvalidChoiceException;
+import application.menu.common.Menu;
+import application.menu.common.MenuType;
 
 import java.util.Scanner;
 
@@ -34,6 +36,8 @@ public class MenuFactory {
                 return new MainMenu(scanner);
             case SCHOOL:
                 return new SchoolMenu(scanner);
+            case TRAVEL:
+                return new TravelMenu(scanner);
             default:
                 throw new InvalidChoiceException("알수 없는 메뉴"+menuType);
         }
