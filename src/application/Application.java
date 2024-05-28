@@ -7,10 +7,11 @@ import application.menu.common.Menu;
 import application.menu.MenuFactory;
 import application.menu.common.MenuType;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Application {
-    public static void main(String[] args) throws InvalidChoiceException{
+    public static void main(String[] args) throws InvalidChoiceException, IOException {
 
         Scanner scanner = new Scanner(System.in);
         Menu currentMenu = MenuFactory.createMenu(MenuType.MAIN, scanner);
@@ -19,11 +20,15 @@ public class Application {
             currentMenu.display();
             String choice = scanner.nextLine();
             try {
-                currentMenu = (Menu) currentMenu.execute(choice);
+                currentMenu = currentMenu.execute(choice);
             } catch (InvalidChoiceException e) {
                 System.err.println(e.getMessage());
             }
+//            scanner.close();
+
         }
+
+
 
     }
 }

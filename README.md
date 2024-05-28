@@ -46,6 +46,10 @@
       * serviceimpkl : service를 implements 받아 구현한 구현체 (필수과목과 기본과목의 각각에 맞춰 재정의)
       * util : 전역에 사용할 변수들 선언. 
       * School 클래서 : 싱글톤으로 구현한 School class
+    * travel : 윤단아님 프로젝트
+    * parking :금천구 주차장 정보
+      * data : 원본 csv 파일, Data수집,정제 로직.
+      * model : 각종 정보 출력을 위한 클래스.
   * exception : 예외처리.
 
 

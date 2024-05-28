@@ -4,6 +4,7 @@ import application.exception.InvalidChoiceException;
 import application.menu.common.Menu;
 import application.menu.common.MenuType;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class MenuFactory {
@@ -27,7 +28,7 @@ public class MenuFactory {
      * @return 각 메뉴 객체 -> 각 메뉴 클래스에서는 Menu 인터페이스를 구현해야한다.
      * @throws InvalidChoiceException
      */
-    public static Menu createMenu(MenuType menuType, Scanner scanner) throws InvalidChoiceException {
+    public static Menu createMenu(MenuType menuType, Scanner scanner) throws InvalidChoiceException, IOException {
         switch (menuType){
             case EXIT:
                 System.out.println("종료합니다");
@@ -38,6 +39,8 @@ public class MenuFactory {
                 return new SchoolMenu(scanner);
             case TRAVEL:
                 return new TravelMenu(scanner);
+            case PARKINGZONE:
+                return new ParkZoneMenu(scanner);
             default:
                 throw new InvalidChoiceException("알수 없는 메뉴"+menuType);
         }

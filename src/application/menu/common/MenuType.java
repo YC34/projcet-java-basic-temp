@@ -9,6 +9,7 @@ public enum MenuType {
         MAIN
     ,   SCHOOL
     ,   TRAVEL
+    ,   PARKINGZONE
     ,   EXIT
 
 }

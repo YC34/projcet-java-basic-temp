@@ -2,6 +2,7 @@ package application.menu.common;
 
 
 import application.exception.InvalidChoiceException;
+import java.io.IOException;
 
 /**
  * menu 인터페이스
@@ -10,7 +11,7 @@ import application.exception.InvalidChoiceException;
  */
 public interface Menu {
     void display();
-    Object execute(String choice) throws InvalidChoiceException;
+    Menu execute(String choice) throws InvalidChoiceException, IOException;
 
 
 }
