@@ -1,11 +1,9 @@
 # PROJECT START
 
 ---
-
     형상관리 : github
     java version : 17
     OS : mac,windows
-
 ---
 ### Git Commit Convention
 
@@ -37,6 +35,8 @@
 * application
   * Application.java :실행하는 메인
   * menu : 메뉴판
+    * common : 공통으로 구현할 interface, enumType의 메뉴 이름.
+    * firstmenu : 첫번쨰 깊이의 메뉴.
   * program : 각 메뉴의 프로그램
     * school : 책 마지막 페이지 프로그램 패키지화
       * data : 객체에 데이터를 만들어내는 클래스

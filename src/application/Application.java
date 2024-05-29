@@ -2,7 +2,6 @@ package application;
 
 
 import application.exception.InvalidChoiceException;
-import application.exception.UnExpectedException;
 import application.menu.common.Menu;
 import application.menu.MenuFactory;
 import application.menu.common.MenuType;
@@ -24,10 +23,8 @@ public class Application {
             } catch (InvalidChoiceException e) {
                 System.err.println(e.getMessage());
             }
-//            scanner.close();
 
         }
-
 
 
     }

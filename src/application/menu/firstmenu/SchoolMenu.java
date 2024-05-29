@@ -1,6 +1,7 @@
-package application.menu;
+package application.menu.firstmenu;
 
 import application.exception.InvalidChoiceException;
+import application.menu.MainMenu;
 import application.menu.common.Menu;
 import application.program.school.data.MakeData;
 import application.program.school.report.GenerateGradeReport;
