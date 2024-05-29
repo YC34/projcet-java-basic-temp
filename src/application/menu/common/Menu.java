@@ -13,5 +13,4 @@ public interface Menu {
     void display();
     Menu execute(String choice) throws InvalidChoiceException, IOException;
 
-
 }

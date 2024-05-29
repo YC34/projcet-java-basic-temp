@@ -2,8 +2,8 @@ package application.menu;
 
 import application.exception.InvalidChoiceException;
 import application.menu.common.Menu;
-import application.program.parking.model.ParkingInfo;
-import application.program.travelagency.TravelAgency;
+import application.program.parking.controller.DataController;
+
 
 import java.io.IOException;
 import java.util.Arrays;
@@ -14,12 +14,12 @@ public class ParkZoneMenu implements Menu {
 
     private Scanner scanner;
     private List<String> options;
-    private ParkingInfo parkingInfo;
+    private DataController dataController;
 
     public ParkZoneMenu(Scanner scanner) throws IOException {
         this.scanner = scanner;
         this.options = Arrays.asList("(I)nfo 금천구 주자장 정보" ,"(F)ree Zone","(S)ummary","(B)ack 메인 메뉴로","(E)xit 종료");
-        this.parkingInfo = new ParkingInfo(scanner);
+        this.dataController = new DataController();
     }
 
     @Override
@@ -30,16 +30,19 @@ public class ParkZoneMenu implements Menu {
     }
 
     @Override
-    public Menu execute(String choice) throws InvalidChoiceException{
+    public Menu execute(String choice) throws InvalidChoiceException, IOException {
         switch (choice.toUpperCase()) {
             case "I":
-                this.parkingInfo.info();
+                System.out.println(this.dataController.getInfo());
                 break;
             case "F":
-                this.parkingInfo.freeZone();
+                System.out.println(this.dataController.getFreeZone());
+//                this.parkingInfo.freeZone();
                 break;
             case "S":
-                this.parkingInfo.summary();
+                System.out.println(this.dataController.getSummary());
+                break;
+//                this.parkingInfo.summary();
             case "B":
                 System.out.println("메인 메뉴로 돌아갑니다.");
                 return new MainMenu(scanner);

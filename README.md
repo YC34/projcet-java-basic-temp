@@ -48,8 +48,10 @@
       * School 클래서 : 싱글톤으로 구현한 School class
     * travel : 윤단아님 프로젝트
     * parking :금천구 주차장 정보
-      * data : 원본 csv 파일, Data수집,정제 로직.
-      * model : 각종 정보 출력을 위한 클래스.
+      * data : 원본 csv 파일 읽어오기.
+      * dto : rawData를 담아주는 클래스(이동을 위한)
+      * controller : 요청을 받아줄 클래스
+      * service : 전반적인 service 로직
   * exception : 예외처리.
 
 
