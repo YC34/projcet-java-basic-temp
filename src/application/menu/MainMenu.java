@@ -15,7 +15,7 @@ public class MainMenu implements Menu {
 
     public MainMenu(Scanner scanner) {
         this.scanner = scanner;
-        this.options= Arrays.asList("(S)chool","(T)ravel","(P)arkZone","(E)Exit");
+        this.options= Arrays.asList("(S)chool","(C)ountry","(P)arkZone","(E)Exit");
 
     }
 
@@ -42,8 +42,8 @@ public class MainMenu implements Menu {
         switch (choice.toUpperCase()) {
             case "S":
                 return MenuFactory.createMenu(MenuType.SCHOOL, scanner);
-            case "T":
-                return MenuFactory.createMenu(MenuType.TRAVEL, scanner);
+            case "C":
+                return MenuFactory.createMenu(MenuType.COUNTRY, scanner);
             case "P" :
                 return MenuFactory.createMenu(MenuType.PARKINGZONE, scanner);
             case "E":

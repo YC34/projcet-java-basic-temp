@@ -11,5 +11,14 @@ public enum MenuType {
     ,   TRAVEL
     ,   PARKINGZONE
     ,   EXIT
+    ,   USA
+    ,   JAPAN
+    ,   KOREA
+    ,   CITY
+    ,   SPOT
+    ,   JSPOT
+    ,   KSPOT
+    ,   USPOT
+    ,   COUNTRY
 
 }

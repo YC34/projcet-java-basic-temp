@@ -3,9 +3,16 @@ package application.menu;
 import application.exception.InvalidChoiceException;
 import application.menu.common.Menu;
 import application.menu.common.MenuType;
+import application.menu.firstmenu.CountryMenu;
 import application.menu.firstmenu.ParkZoneMenu;
 import application.menu.firstmenu.SchoolMenu;
 import application.menu.firstmenu.TravelMenu;
+import application.menu.firstmenu.secondmenu.JapanMenu;
+import application.menu.firstmenu.secondmenu.KoreaMenu;
+import application.menu.firstmenu.secondmenu.UsaMenu;
+import application.menu.firstmenu.secondmenu.thirdmenu.JSpotMenu;
+import application.menu.firstmenu.secondmenu.thirdmenu.KSpotMenu;
+import application.menu.firstmenu.secondmenu.thirdmenu.USpotMenu;
 
 import java.io.IOException;
 import java.util.Scanner;
@@ -44,6 +51,20 @@ public class MenuFactory {
                 return new TravelMenu(scanner);
             case PARKINGZONE:
                 return new ParkZoneMenu(scanner);
+            case JAPAN:
+                return new JapanMenu(scanner);
+            case KOREA:
+                return new KoreaMenu(scanner);
+            case USA:
+                return new UsaMenu(scanner);
+            case COUNTRY:
+                return new CountryMenu(scanner);
+            case JSPOT:
+                return new JSpotMenu(scanner);
+            case KSPOT:
+                return new KSpotMenu(scanner);
+            case USPOT:
+                return new USpotMenu(scanner);
             default:
                 throw new InvalidChoiceException("알수 없는 메뉴"+menuType);
         }
